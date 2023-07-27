@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="주변 병원 확인하기"
+        android:layout_marginTop="40dp"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        tools:layout_editor_absoluteY="70dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:layout_marginTop="410dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/beforeButton"
+            android:layout_width="113dp"
+            android:layout_height="57dp"
+            android:layout_gravity="left"
+            android:layout_margin="50dp"
+            android:text="이전" />
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="113dp"
+            android:layout_height="57dp"
+            android:layout_gravity="right"
+            android:layout_margin="50dp"
+            android:text="홈화면" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
