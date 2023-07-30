@@ -11,7 +11,7 @@ class Result : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        //선언
+        //선언re
         nextButton = findViewById<Button>(R.id.nextButton)
 
         //동작
