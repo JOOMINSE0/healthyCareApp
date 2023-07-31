@@ -83,17 +83,50 @@ class MapsFragment(search: Search) : Fragment(), OnMapReadyCallback {
         mMap.apply {
             mMap.clear()
             val seoul = LatLng(37.566418, 126.977943)
+            val hosp1 = LatLng(37.5672138, 127.0056710 )
+            val hosp2 = LatLng( 37.5651100126, 126.9888709)
+            val hosp3 = LatLng(37.5555057, 126.9737678)
+            val hosp4 = LatLng(37.5664918,126.9818658)
+            val hosp5 = LatLng(37.5608909,126.9811087)
 
-            val markerOptions = MarkerOptions()
-                .position(seoul)
-                .title("Seoul")
+            val markerOptions1 = MarkerOptions()
+                .position(hosp1)
+                .title("국립중앙의료원")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
 
-            mMap?.addMarker(markerOptions)
+            mMap?.addMarker(markerOptions1)
+
+            val markerOptions2 = MarkerOptions()
+                .position(hosp2)
+                .title("인제대학교 서울백병원")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+
+            mMap?.addMarker(markerOptions2)
+
+            val markerOptions3 = MarkerOptions()
+                .position(hosp3)
+                .title("성광의료재단 차여성의원")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+
+            mMap?.addMarker(markerOptions3)
+
+            val markerOptions4 = MarkerOptions()
+                .position(hosp4)
+                .title("하나은행부속의원")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+
+            mMap?.addMarker(markerOptions4)
+
+            val markerOptions5 = MarkerOptions()
+                .position(hosp5)
+                .title("김경희건강한마음의원")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+
+            mMap?.addMarker(markerOptions5)
 
             val cameraPosition = CameraPosition.Builder()
                 .target(seoul)
-                .zoom(15.0f)
+                .zoom(13.0f)
                 .build()
             val cameraUpdate = CameraUpdateFactory.newCameraPosition(cameraPosition)
             mMap.moveCamera(cameraUpdate)
