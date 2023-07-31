@@ -9,7 +9,7 @@ import android.widget.TextView
 
 class Result : AppCompatActivity() {
     lateinit var nextButton: Button
-    
+
     lateinit var nameTextView: TextView
     lateinit var symptomTextView: TextView
 
