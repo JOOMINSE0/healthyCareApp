@@ -20,25 +20,25 @@ class UserDatabase(context: Context, name:String?, factory: SQLiteDatabase.Curso
 }
 
 //코로나or감기 증상 결과를 uSymp에 저장하고 Result클래스에서 uSymp호출하여 출력
-class DBHelper(context: Context) : SQLiteOpenHelper(context, "UserDatabase", null, 1) {
+class DBHelper(context: Context) : SQLiteOpenHelper(context, "UserTable", null, 1) {
 
     companion object {
-        const val TABLE_NAME = "UserDatabase"
+//        const val TABLE_NAME = "UserTable"
         const val COLUMN_NAME = "uName"
         const val COLUMN_DONG = "uDong"
         const val COLUMN_SYMP = "uSymp"
-        const val COLUMN_ADDRESS = "uAddress"
+//        const val COLUMN_ADDRESS = "uAddress"
     }
 
-    val TABLE_NAME= "UserDatabase"
-    val COLUMN_NAME= "uName"
-    val COLUMN_DONG= "uDong"
-    val COLUMN_SYMP= "uSymp"
-    val COLUMN_ADDRESS= "uAddress"
+    val TABLE_NAME= "UserTable"
+//    val COLUMN_NAME= "uName"
+//    val COLUMN_DONG= "uDong"
+//    val COLUMN_SYMP= "uSymp"
+//    val COLUMN_ADDRESS= "uAddress"
 
     fun getData(): Cursor? {
         val db = readableDatabase
-        return db.query("UserDatabase", arrayOf("uName", "uDong", "uSymp", "uAddress"), null, null, null, null, null)
+        return db.query("UserTable", arrayOf("uName", "uDong", "uSymp", "uAddress"), null, null, null, null, null)
     }
 
     override fun onCreate(db: SQLiteDatabase?) {

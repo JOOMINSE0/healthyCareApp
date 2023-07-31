@@ -27,7 +27,7 @@ class Search : AppCompatActivity() {
 
         //데이터베이스 호출
         val DBHelper = DBHelper(this)
-        userData=UserDatabase(this, "UserDatabase", null, 1)
+        userData=UserDatabase(this, "UserTable", null, 1)
 
         //선언(home)
         homeButton = findViewById<Button>(R.id.homeButton)
@@ -47,8 +47,6 @@ class Search : AppCompatActivity() {
             var intent = Intent(this, Result::class.java)
             startActivity(intent)
         }
-
-
 
 
         //코로나or감기 결과 정해지면 DB의 uSymp에 결과값 insert

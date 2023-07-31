@@ -12,17 +12,17 @@ class PersonnelInfo : AppCompatActivity() {
     lateinit var nextButton: Button
     lateinit var userData: UserDatabase
     lateinit var sqlitedb: SQLiteDatabase
-    lateinit var name: EditText
-    lateinit var dong: EditText
+    lateinit var userName: EditText
+    lateinit var userDong: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personnel_info)
 
-        name=findViewById(R.id.nameEditText)
-        dong=findViewById(R.id.locateEditText)
+        userName=findViewById(R.id.nameEditText)
+        userDong=findViewById(R.id.locateEditText)
 
-        val DBHelper = DBHelper(this)
+        val dbHelper = DBHelper(this)
 
         userData=UserDatabase(this, "UserDatabase", null, 1)
 
@@ -35,12 +35,12 @@ class PersonnelInfo : AppCompatActivity() {
 
             // 데이터 추가
             val values = ContentValues()
-            values.put(DBHelper.COLUMN_NAME, name.text.toString())
-            values.put(DBHelper.COLUMN_DONG, dong.text.toString())
+            values.put(DBHelper.COLUMN_NAME, userName.text.toString())
+            values.put(DBHelper.COLUMN_DONG, userDong.text.toString())
 
             // 데이터베이스에 데이터 추가
-            val db = DBHelper.writableDatabase
-            db.insert(DBHelper.TABLE_NAME, null, values)
+            val db = dbHelper.writableDatabase
+            db.insert(dbHelper.TABLE_NAME, null, values)
 
             var intent = Intent(this, Select::class.java)
             startActivity(intent)
