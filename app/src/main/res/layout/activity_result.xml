@@ -8,6 +8,13 @@
 
 
     <TextView
+        android:id="@+id/symptom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView" />
+
+    <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,6 +22,13 @@
         android:layout_marginTop="200dp"
         android:text="사용자(이름)는(은) \n코로나19 / 감기 로 \n      예측됩니다"
         android:textSize="27sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView" />
 
     <Button
         android:id="@+id/nextButton"

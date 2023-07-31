@@ -45,4 +45,5 @@
         android:text="다음"
         tools:layout_editor_absoluteX="285dp"
         tools:layout_editor_absoluteY="542dp" />
+
 </LinearLayout>
