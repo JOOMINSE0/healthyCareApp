@@ -50,11 +50,11 @@ class Search : AppCompatActivity() {
 
 
         //코로나or감기 결과 정해지면 DB의 uSymp에 결과값 insert
-        /*val values = ContentValues()
-        values.put(DBHelper.COLUMN_SYMP, result.text.toString()) //result=코로나or감기 결과 변수(임의)
-
-        val db = DBHelper.writableDatabase
-        db.insert(DBHelper.TABLE_NAME, null, values)*/
+//        val values = ContentValues()
+//        values.put(DBHelper.COLUMN_SYMP, result.text.toString()) //result=코로나or감기 결과 변수(임의)
+//
+//        val db = DBHelper.writableDatabase
+//        db.insert(DBHelper.TABLE_NAME, null, values)
 
 
     }

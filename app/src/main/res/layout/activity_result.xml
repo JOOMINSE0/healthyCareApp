@@ -1,84 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/text_userName"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="200dp"
-            android:layout_weight="1"
-            android:text=" "
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-        <TextView
-            android:id="@+id/symptom2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="님은"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/text_userName"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="200dp"
+                android:layout_weight="1"
+                android:text="test"
+                android:gravity="right"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <TextView
+                android:id="@+id/symptom2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="님은"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
     </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:orientation="horizontal"
     >
 
-    <TextView
-        android:id="@+id/text_userSymp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text=" "
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        <TextView
+                android:id="@+id/text_userSymp"
+                android:layout_width="181dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <TextView
+                android:id="@+id/text_userSympProb"
+                android:layout_width="119dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:text="숫자"
+                android:gravity="right"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <TextView
+                android:id="@+id/symptom4"
+                android:layout_width="258dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="%로 예측됩니다."
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
-    <TextView
-        android:id="@+id/symptom4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="로 예측됩니다."
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-</LinearLayout>
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/nextButton"
-        android:layout_width="87dp"
-        android:layout_height="56dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="250dp"
-        android:text="다음" />
+            android:id="@+id/nextButton"
+            android:layout_width="87dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="250dp"
+            android:text="다음" android:visibility="visible"/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
 
 </LinearLayout>
