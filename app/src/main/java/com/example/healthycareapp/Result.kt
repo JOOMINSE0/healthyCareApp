@@ -35,23 +35,23 @@ class Result : AppCompatActivity() {
         nameTextView.text = secondIntent.getStringExtra("user_name")
         symptomTextView.text = secondIntent.getStringExtra("res_symptom")
         symptomProbTextView.text = secondIntent.getStringExtra("prob")
-        /*
-        //데이터베이스 호출
-        val dbHelper = DBHelper(this)
 
-        //사용자 이름(uName), 사용자 증상(uSymp) 호출
-        val cursor = dbHelper.getData()
+        // 데이터베이스 호출
+        userData = UserDatabase(this, "UserTable", null, 1)
+
+        // 사용자 이름(uName), 사용자 증상(uSymp) 호출
+        val cursor = userData.getData()
         if (cursor != null && cursor.moveToFirst()) {
-            val nameIndex = cursor.getColumnIndex(DBHelper.COLUMN_NAME)
-            //val symptomIndex = cursor.getColumnIndex(DBHelper.COLUMN_SYMP)
+            val nameIndex = cursor.getColumnIndex(UserDatabase.COLUMN_NAME)
+            val symptomIndex = cursor.getColumnIndex(UserDatabase.COLUMN_SYMP)
 
             val nameValue = cursor.getString(nameIndex)
-            //val symptomValue = cursor.getString(symptomIndex)
+            val symptomValue = cursor.getString(symptomIndex)
 
             nameTextView.text = nameValue
-            //symptomTextView.text = symptomValuesymptomTextView.text = symptomValue
+            symptomTextView.text = symptomValue
 
             cursor.close()
-        }*/
+        }
     }
 }

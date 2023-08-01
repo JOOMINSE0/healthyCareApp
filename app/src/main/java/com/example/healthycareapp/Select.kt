@@ -51,22 +51,19 @@ class Select : AppCompatActivity() {
                 res_symptom = "감기"
                 prob = 80
             }
-           /* //코로나or감기 결과 정해지면 DB의 uSymp에 결과값 insert
-            val dbHelper = DBHelper(this)
-            userData=UserDatabase(this, "UserTable", null, 1)
 
-            val values = ContentValues()
-            values.put(DBHelper.COLUMN_SYMP, res_symptom)//result.text.toString()) //result=코로나or감기 결과 변수(임의)
+            //코로나or감기 결과 정해지면 DB의 uSymp에 결과값 insert
+            // 결과를 데이터베이스에 저장
+            val userDatabase = UserDatabase(this, "UserTable", null, 1)
+            userDatabase.saveResult(name, res_symptom)
 
-            val db = dbHelper.writableDatabase
-            db.insert(dbHelper.TABLE_NAME, null, values)
-*/
             var intent = Intent(this, Result::class.java)
             intent.putExtra("user_name", name)
             intent.putExtra("res_symptom", res_symptom)
             intent.putExtra("prob", prob.toString())
             startActivity(intent)
         }
+
         button1.setOnClickListener{
             button1.text = "selected"
             total_symptom++

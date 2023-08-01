@@ -11,8 +11,6 @@ class Search : AppCompatActivity() {
     private lateinit var mapView: GoogleMap
     lateinit var homeButton: Button
     lateinit var beforeButton: Button
-    lateinit var userData: UserDatabase
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +22,6 @@ class Search : AppCompatActivity() {
         val mapsFragment = MapsFragment(this)
         fragmentTransaction.add(R.id.map, mapsFragment)
         fragmentTransaction.commit()
-
-        //데이터베이스 호출
-        val DBHelper = DBHelper(this)
-        userData=UserDatabase(this, "UserTable", null, 1)
 
         //선언(home)
         homeButton = findViewById<Button>(R.id.homeButton)
@@ -47,15 +41,6 @@ class Search : AppCompatActivity() {
             var intent = Intent(this, Result::class.java)
             startActivity(intent)
         }
-
-
-        //코로나or감기 결과 정해지면 DB의 uSymp에 결과값 insert
-//        val values = ContentValues()
-//        values.put(DBHelper.COLUMN_SYMP, result.text.toString()) //result=코로나or감기 결과 변수(임의)
-//
-//        val db = DBHelper.writableDatabase
-//        db.insert(DBHelper.TABLE_NAME, null, values)
-
 
     }
 }

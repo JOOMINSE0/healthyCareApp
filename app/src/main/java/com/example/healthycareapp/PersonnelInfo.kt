@@ -22,8 +22,7 @@ class PersonnelInfo : AppCompatActivity() {
         userName=findViewById(R.id.nameEditText)
         userDong=findViewById(R.id.locateEditText)
 
-        val dbHelper = DBHelper(this)
-
+        //데이터베이스 선언
         userData=UserDatabase(this, "UserDatabase", null, 1)
 
         //선언
@@ -33,14 +32,13 @@ class PersonnelInfo : AppCompatActivity() {
         nextButton.setOnClickListener{
             //사용자의 이름과 지역(동) 정보가 DB에 저장
 
-            // 데이터 추가
-            val values = ContentValues()
-            values.put(DBHelper.COLUMN_NAME, userName.text.toString())
-            values.put(DBHelper.COLUMN_DONG, userDong.text.toString())
+            val name = userName.text.toString()
+            val dong = userDong.text.toString()
 
-            // 데이터베이스에 데이터 추가
-            val db = dbHelper.writableDatabase
-            db.insert(dbHelper.TABLE_NAME, null, values)
+            // 데이터 추가
+            val symp = "None"
+            val address = "None"
+            userData.insertData(name, dong, symp, address)
 
             var intent = Intent(this, Select::class.java)
             startActivity(intent)
